@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+Autor: junior Dias
+!-->
+    <meta name="description"
+        content="Ferramenta simples e profissional para converter imagens RAW em JPEG ou PNG online.">
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Conversor RAW</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" id="logo">
+        </div>
+        <h1>Conversor de Imagem RAW</h1>
+    </header>
+
+    <main>
+        <input type="file" id="fileInput" accept=".raw" aria-label="Selecione um arquivo RAW">
+        <br><br>
+        <label for="format">Escolha o formato:</label>
+        <select id="format" aria-label="Escolha o formato de conversão">
+            <option value="jpeg">JPEG</option>
+            <option value="png">PNG</option>
+        </select>
+        <br><br>
+        <button id="convertButton" aria-label="Clique para converter">Converter</button>
+
+        <div class="progress" id="progressContainer" style="display: none;">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div id="preview" style="display: none;">
+            <h2>Pré-visualização:</h2>
+            <canvas id="canvas"></canvas>
+        </div>
+        <p id="errorMessage" class="error"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Conversor RAW - Todos os direitos reservados</p>
+        <p>
+            <strong>E-mail:</strong>
+            <a href="mailto:jrdias32@gmail.com" class="email-link">jrdias32@gmail.com</a>
+        </p>
+        <p>
+            <strong>Visite minha página pessoal:</strong>
+            <a href="https://juniordias1981.github.io/JRmanutencao/" target="_blank" class="web-link">
+                <i class="fas fa-globe"></i> GitHub
+            </a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.rawgit.com/libraw/libraw-js/v0.0.4/libraw.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
